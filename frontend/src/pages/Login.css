@@ -1,0 +1,173 @@
+
+#credential-main{
+    background: white;
+  }
+  
+  /* <------------SignUp-----------> */
+  
+  
+  #credential-main{
+    font-size: 14px;
+    font-weight: bolder;
+  }
+  
+  
+  
+  .main-signup {
+    /* border: 1px solid #000; */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+  }
+  
+  .signup { 
+    text-align: center;
+    height: auto;
+    width: 400px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://images.pexels.com/photos/4175070/pexels-photo-4175070.jpeg?auto=compress&cs=tinysrgb&w=600);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  
+  
+  .signup-form {
+    /* border: 1px solid #c42020; */
+   
+    
+  }
+  
+  .signup-form > input {
+    display: flex;
+    width: 80%;
+    margin: 25px;
+    padding: 6px;
+    border: 2px solid #000;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-radius: 10px;
+  }
+  
+  .signup-form > select {
+    padding:3px;
+    margin: auto;
+    display: flex;
+    border-radius:30px;
+    justify-content: center;
+  }
+  
+  .signup-form > button {
+    margin: 20px;
+    border-radius: 30px;
+    padding: 6px 8px 6px 8px;
+    background: #ff3f6c;
+  }
+  
+  .switch-signup{
+      border-bottom: none;
+      width: 100%;
+      height:40px;
+      margin: auto;
+      padding-top: 8px;
+      cursor: pointer;
+  }
+  
+  .switch-signup >button{
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: rgb(227, 237, 41);
+  }
+  
+  
+  
+  /* <-----------Login--------------> */
+  
+  
+  .main-login {
+      margin: 50px; 
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .login {
+      /* border: 1px solid #000; */
+      text-align: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(https://images.pexels.com/photos/4175070/pexels-photo-4175070.jpeg?auto=compress&cs=tinysrgb&w=600);
+      height: auto;
+      width: 400px;
+      margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+    .login-form {
+      /* border: 1px solid #c42020; */
+      position: relative;
+      top: 30px;
+    }
+    
+    .login-form > input {
+      display: flex;
+      width: 80%;
+      margin: 30px;
+      padding: 8px;
+      border-left: none;
+      border-top: none;
+      border-right: none;
+      border-radius: 10px;
+    }
+    
+    .login-form > select {
+      padding: 3px;
+      margin: auto;
+      display: flex;
+      border-radius:30px;
+      justify-content: center;
+    }
+    
+    .login-form > button {
+     
+      margin: 30px;
+      border-radius: 20px;
+      padding: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background: #ff3f6c;
+    }
+  
+    .switch-login{
+      border-bottom: none;
+      width: 100%;
+      height: 40px;
+      margin: auto;
+  }
+  
+  .switch-login >button{
+      background: none;
+      border: none;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      cursor: pointer;
+      color: rgb(237, 227, 41);
+  }
+  
+  
+  
+  @media only screen and (max-width: 600px) {
+     
+    .signup { 
+      width: auto;
+    }
+  
+  
+    .login {
+      width: auto;
+    }
+  
+  }
+  
