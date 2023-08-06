@@ -38,22 +38,22 @@ const Homepage = () => {
               <form className='form' onSubmit={handleSubmit}><br />
                 <label className='label'>Add your currency from here</label> <br />
                 <select className='country'>
-                  <option value="">Country</option>
-                  <option value="US">United States</option>
-                  <option value="EU">European Union</option>
-                  <option value="UK">United Kingdom</option>
-                  <option value="JAPAN">Japan</option>
-                  <option value="SWITZERLAND">Switzerland</option>
-                  <option value="AUS">Australia</option>
-                  <option value="CANADA">Canada</option>
-                  <option value="CHINA">China</option>
-                  <option value="IND">India</option>
-                  <option value="RUSSIA">Russia</option>
-                  <option value="SK">South Korea</option>
-                  <option value="BRAZIL">Brazil</option>
-                  <option value="MEXICO">Mexico</option>
-                  <option value="SA">South Africa</option>
-                  <option value="TURKEY">Turkey</option>
+                <option value="">Country</option>
+                  <option value="$">United States</option>
+                  <option value="€">European Union</option>
+                  <option value="£">United Kingdom</option>
+                  <option value="¥">Japan</option>
+                  <option value="CHf">Switzerland</option>
+                  <option value="$">Australia</option>
+                  <option value="CAD">Canada</option>
+                  <option value="¥">China</option>
+                  <option value="₹">India</option>
+                  <option value="₽">Russia</option>
+                  <option value="₩">South Korea</option>
+                  <option value="R$">Brazil</option>
+                  <option value="Mex$">Mexico</option>
+                  <option value="R">South Africa</option>
+                  <option value="₺">Turkey</option>
                 </select><br /> <br />
                 <label>Enter Amount</label><br />
                 <input className='input' type="number" placeholder='Enter Amount Here' onChange={(e)=> setAmount(e.target.value)} /><br />

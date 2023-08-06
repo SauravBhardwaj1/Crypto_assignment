@@ -1,0 +1,41 @@
+
+.signup-form{
+    width: 400px;
+    padding: 20px;
+    margin: 40px auto;
+    border: 1px solid black;
+    align-items: center;
+    background-color: aquamarine;
+}
+.signup-form h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.signup-input{
+    width: 80%;
+    height: 30px;
+    font-size: larger;
+    border: 1px solid white;
+    background-color: rgb(204, 253, 237);
+}
+
+.signup-btn{
+    width: 150px;
+    height: 50px;
+    font-size: large;
+    border: 1px solid white;
+    background-color: rgb(102, 97, 97);
+    color: white;
+    
+}
+
+.signup-btn:hover{
+  background-color: blue;
+  color: white;
+}
+
+.country{
+    font-size: 15px;
+}
