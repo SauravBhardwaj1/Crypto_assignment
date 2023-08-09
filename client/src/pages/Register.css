@@ -1,0 +1,65 @@
+/* Login.css */
+.container1 {
+    margin-top: 5rem;
+  }
+  
+  .reg-card {
+    max-width: 400px;
+    height: 450px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: aquamarine;
+    margin-bottom: 150px;
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 15px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: start;
+    
+  }
+  
+  .form-control {
+    margin-bottom: 1rem;
+    margin-top: 20px;
+    
+  }
+  
+  .form-control input {
+    width: 70%;
+    padding: 8px;
+  
+  }
+  .btn-primary {
+    width: 30%;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    background-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #3d5977;
+  }
+  
+  .p-tag{
+    margin-top: 10px;
+    color: rgb(2, 85, 6);
+  }
+  
+  .p-tag a{
+    color: rgb(190, 37, 10);
+    font-weight: bold;
+  }
