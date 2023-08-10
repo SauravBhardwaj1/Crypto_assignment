@@ -1,24 +1,26 @@
 // UserProfile.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./UserProfile.css"
 
 const UserProfile = () => {
-  const [user, setUser] = useState([]);
-  const [id, setId] = useState("")
+  const [user, setUser] = useState({});
+  const [id, setId] = useState(JSON.parse(localStorage.getItem("user")))
 
   
  console.log(id)
 
 
-  const fetchUser = async (id) => {
-    try {
-      const response = await axios.get(`https://referral-system-tqkc.onrender.com/api/user/get/${id}`);
-      setUser(response.data.data);
-      setId(JSON.parse(localStorage.getItem('user')));
-      console.log(response.data.data);
-    } catch (error) {
-      console.error('Error fetching user data:', error);
-    }
+  const fetchUser =  (id) => {
+   
+      return axios.get(`https://referral-system-tqkc.onrender.com/api/user/get/${id}`).then((res)=>{
+        console.log(res.data.user)
+        setUser(res.data.user)
+      }).catch((er)=>{
+        console.log(er)
+      })
+     
+    
   };
 
   console.log(user)
@@ -35,16 +37,17 @@ const UserProfile = () => {
   return (
     <div>
       <h2>User Profile</h2>
-        {
-           user.map((el)=>{
-            return <div key={el.id}>
+        
+             <div className='details-users' key={user._id}>
                 <p>Name: {user.name}</p>
                 <p>Email: {user.email}</p>
+                <p>country: {user.country}</p>
+                <p>balance: {user.balance}</p>
+                <p>Referral Code: {user.referralCode}</p>
+                <p>Role: {user.role}</p>
             </div>
-           }) 
-        }
-      
-      {/* Display other user data as needed */}
+           
+
     </div>
   );
 };

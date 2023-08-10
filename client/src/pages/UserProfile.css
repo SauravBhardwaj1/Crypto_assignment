@@ -1,0 +1,14 @@
+.details-users{
+    width: 250px; 
+    margin: auto; 
+    font-size: 15px;  
+    font-weight: 500;
+    color: rgb(3, 94, 15);
+    background-color: rgb(164, 248, 248);
+    
+}
+
+.details-users p{
+    text-align:start;
+    margin-left: 5px
+}

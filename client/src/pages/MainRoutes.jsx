@@ -12,7 +12,7 @@ const MainRoutes = () => {
         <Routes>
             <Route path='/' element={<Homepage/>} />
             <Route path='/login' element={<Login />} />
-            {/* <Route path="/user/:id" render={(props) => <UserProfile userId={props.match.params.id} />} /> */}
+           
             <Route path='/signup' element={<Signup />} />
             <Route path='/admin' element={<Admin />} />
         </Routes>

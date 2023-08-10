@@ -1,14 +1,29 @@
 .heading{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin: auto;
+    border: 1px solid rgb(246, 246, 247);
+    margin-top: 40px;
 }
-
-.details{
-    margin-top: 10px;
+.admin-div{
+    width: 400px;
+    height: 200px;
+    text-align: start;
+    border: 1px solid rgb(179, 177, 177);
+    background-color: rgb(180, 218, 218);
+    margin:auto;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.users-div{
+    margin-top: 20px;
+    text-align: start;
+}
+
 .details h3{
+    text-align: start;
     font-size: 14px;
 }

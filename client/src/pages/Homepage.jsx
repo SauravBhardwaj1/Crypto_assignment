@@ -70,9 +70,7 @@ const Homepage = () => {
             <div className='account-div'>
               <h2>User account details</h2>
               <div>
-                {/* <h3>Account Number :- xxxxxxxxx2345</h3>
-                <h3>Amount        :- xxx000</h3>
-                 <p>Reffered By   :- Saurav</p> */}
+                
                  <UserProfile  />
               </div>
             </div>

@@ -3,6 +3,16 @@
   margin-top: 5rem;
 }
 
+.container1 h1{
+  background-color: rgb(201, 218, 212);
+  width: 50%;
+  margin: auto;
+}
+.container1 p{
+  color: blue;
+  font-size: 20px;
+  font-weight: 600;
+}
 .card {
   max-width: 400px;
   height: 300px;
