@@ -5,6 +5,7 @@ import { sign } from "../middlewares/auth";
 
 
 export const loginUser = async (req: Request, res: Response) => {
+    
     try {
 
         const userAgent = req.headers['user-agent'] || '';
