@@ -18,6 +18,10 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault()
+    if (referral.length < 6 || !/^[a-zA-Z0-9]+$/.test(referral)) {
+      alert("Invalid referral code. Referral code should be at least 6 characters long and contain only letters and numbers.");
+      return;
+    }
     try {
       const response = await axios.post('https://referral-system-tqkc.onrender.com/api/user/create', {
         name,
@@ -98,6 +102,9 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
+
 
 
 
