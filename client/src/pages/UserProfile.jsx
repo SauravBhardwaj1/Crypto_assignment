@@ -8,13 +8,13 @@ const UserProfile = () => {
   const [id, setId] = useState(JSON.parse(localStorage.getItem("user")))
 
   
- console.log(id)
+//  console.log(id)
 
 
   const fetchUser =  (id) => {
    
       return axios.get(`https://referral-system-tqkc.onrender.com/api/user/get/${id}`).then((res)=>{
-        console.log(res.data.user)
+        // console.log(res.data.user)
         setUser(res.data.user)
       }).catch((er)=>{
         console.log(er)
@@ -23,7 +23,7 @@ const UserProfile = () => {
     
   };
 
-  console.log(user)
+  // console.log(user)
 
   useEffect(() => {
     
