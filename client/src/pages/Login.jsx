@@ -27,31 +27,10 @@ const Login = () => {
         localStorage.setItem('user', JSON.stringify(res.data.id));
         localStorage.setItem('token', JSON.stringify(res.data.token));
         console.log(res.data.url)
-            // Check device configuration here
-    // const isMobile = /* perform the check for mobile device */;
-    // const isTablet = /* perform the check for tablet device */;
-
-    // if (isMobile) {
-    //   // Redirect for mobile devices
-    //   // navigate(mobileRedirectUrl);
-    //   navigate(url); // Redirect as per your logic
-    // } else if (isTablet) {
-    //   // Redirect for tablet devices
-    //   // navigate(tabletRedirectUrl);
-    //   navigate(url); // Redirect as per your logic
-    // } else {
-    //   // Redirect for other devices (desktop, etc.)
-    //   // navigate(desktopRedirectUrl);
-    //   navigate(url); // Redirect as per your logic
-    // }
+           
         LoginUser()
-        // Get the URL you want to redirect to after login.
         alert("login successful")
-      // const redirectUrl = res.data.url;
-
-      // // Perform the redirect.
-      // navigate(redirectUrl);
-        
+    
         window.location.replace(res.data.url)
       
       })

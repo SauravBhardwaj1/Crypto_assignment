@@ -7,32 +7,38 @@ import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
-  const [name, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('')
-  const [country, setCountry] = useState('')
-  const [referral, setReferral] = useState('')
-
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    country:'',
+    referralCode: '',
+  });
   const navigate= useNavigate()
+
+  const handleInputChange = event => {
+    const { name, value } = event.target;
+    setFormData(prevData => ({ ...prevData, [name]: value }));
+  };
 
 
   const handleSignup = async (e) => {
     e.preventDefault()
-    if (referral.length < 6 || !/^[a-zA-Z0-9]+$/.test(referral)) {
-      alert("Invalid referral code. Referral code should be at least 6 characters long and contain only letters and numbers.");
-      return;
-    }
     try {
-      const response = await axios.post('https://referral-system-tqkc.onrender.com/api/user/create', {
-        name,
-        password,
-        email,
-        country,
-        referral
+      const response = await fetch('https://referral-system-tqkc.onrender.com/api/user/create',{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
       });
-      console.log('Signup response:', response.data);
-      alert("registered successfully")
-      navigate("/login")
+      if (response.ok) {
+        alert('User registered successfully');
+        navigate("/login")
+      } else {
+        console.error('Registration failed');
+      }
+      
     } catch (error) {
       console.error('Signup error:', error);
     }
@@ -49,48 +55,52 @@ const Signup = () => {
             <input
               type="text"
               placeholder="Username"
-              value={name}
-              onChange={(e) => setUsername(e.target.value)}
+              value={formData.name}
+              onChange={handleInputChange}
+              required
             /><br />
             <label className='form-label'>Enter Email</label><br />
             <input
               type="email"
               placeholder="Enter Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={formData.email}
+              onChange={handleInputChange}
+              required
             /><br />
             <label className='form-label'>Enter Password</label><br />
             <input
               type="password"
               placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={formData.password}
+              onChange={handleInputChange}
+              required
             /><br />
             <label className='form-label'>Select country</label><br />
-            <select className='country' name='country' value={country}  onChange={(e)=> setCountry(e.target.value)}>
+            <select className='country' name='country' value={formData.country}  onChange={handleInputChange} required>
                   <option value="">Country</option>
-                  <option value="$">United States</option>
-                  <option value="€">European Union</option>
-                  <option value="£">United Kingdom</option>
-                  <option value="¥">Japan</option>
-                  <option value="CHf">Switzerland</option>
-                  <option value="AU$">Australia</option>
-                  <option value="CA$">Canada</option>
-                  <option value="¥">China</option>
-                  <option value="₹">India</option>
-                  <option value="₽">Russia</option>
-                  <option value="₩">South Korea</option>
-                  <option value="R$">Brazil</option>
-                  <option value="Mex$">Mexico</option>
-                  <option value="R">South Africa</option>
-                  <option value="₺">Turkey</option>
+                  <option value="US">United States</option>
+                  <option value="EU">European Union</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="JAPAN">Japan</option>
+                  <option value="SWITZERLAND">Switzerland</option>
+                  <option value="AUS">Australia</option>
+                  <option value="CANADA">Canada</option>
+                  <option value="CHINA">China</option>
+                  <option value="IND">India</option>
+                  <option value="RUSSIA">Russia</option>
+                  <option value="SK">South Korea</option>
+                  <option value="BRAZIL">Brazil</option>
+                  <option value="MEXICO">Mexico</option>
+                  <option value="SA">South Africa</option>
+                  <option value="TURKEY">Turkey</option>
               </select><br /> <br />
               <label className='form-label'>Enter Referral code</label><br />
             <input
               type="text"
               placeholder="Referral code"
-              value={referral}
-              onChange={(e) => setReferral(e.target.value)}
+              value={formData.referralCode}
+              onChange={handleInputChange}
+              required
             /><br />
             <button className='btn-primary' onClick={handleSignup}>Signup</button>
           </form>
@@ -102,10 +112,5 @@ const Signup = () => {
 };
 
 export default Signup;
-
-
-
-
-
 
 
